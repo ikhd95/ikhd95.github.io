@@ -10,14 +10,4 @@ document.addEventListener('DOMContentLoaded', function(){
   }
   if(btn) btn.addEventListener('click', toggle);
   if(btn2) btn2.addEventListener('click', toggle);
-
-  // simple contact form handler
-  const form = document.getElementById('contactForm');
-  if(form){
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      alert("Merci — le formulaire a été simulé ici. Configure un backend ou un service (Formspree, Netlify) pour l'envoyer réellement.");
-      form.reset();
-    });
-  }
 });
