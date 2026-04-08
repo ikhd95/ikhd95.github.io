@@ -938,4 +938,7 @@ function closeModal() {
 (()=>{document.querySelectorAll('.project-card,.skill-card,.edu-card').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(800px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-8px)`});c.addEventListener('mouseleave',()=>{c.style.transform='perspective(800px) rotateY(0) rotateX(0) translateY(0)';c.style.transition='transform 0.5s';setTimeout(()=>c.style.transition='',500)})})})();
 
 // SMOOTH ANCHORS
-document.querySelecto
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const h=a.getAttribute('href');if(h.length>1){const t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}}}));
+</script>
+</body>
+</html>
